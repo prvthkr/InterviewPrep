@@ -6,6 +6,11 @@
 extern "C" {
 #endif                          /* __cplusplus */
 
+#include <stdio.h>
+#include <stdbool.h>
+#include <stdlib.h>
+#include <string.h>
+
 typedef struct stack {
 #if CHAR
     char ch;
@@ -17,11 +22,13 @@ typedef struct stack {
 
  #if CHAR
     void push (Stack **Head, char ch);
+    char pop(Stack **Head);
+    char top(Stack *Head);
 #else
     void push (Stack **Head, int ch);
+    int pop(Stack **Head);
+    int top(Stack *Head);
 #endif
-char pop(Stack **Head);
-char top(Stack *Head);
 void display(Stack *Head);
   
 #ifdef __cplusplus
