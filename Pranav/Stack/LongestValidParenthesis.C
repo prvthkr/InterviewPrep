@@ -17,7 +17,7 @@ bool isEmpty(Stack *Head) {
 }
 
 void push (Stack **Head, char ch) {
-    Stack *node = (Stack *) malloc(sizeof(sizeof(Stack)));
+    Stack *node = (Stack *) malloc(sizeof(Stack));
     
     node->ch = ch;
     node->next = (*Head);
